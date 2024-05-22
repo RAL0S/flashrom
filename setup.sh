@@ -28,7 +28,7 @@ check_env() {
 }
 
 install() {
-  wget https://github.com/AttifyOS/flashrom/releases/download/v1.2/flashrom_1.2_amd64.snap -O $RALPM_TMP_DIR/flashrom_1.2_amd64.snap
+  wget https://github.com/RAL0S/flashrom/releases/download/v1.2/flashrom_1.2_amd64.snap -O $RALPM_TMP_DIR/flashrom_1.2_amd64.snap
   sudo snap install $RALPM_TMP_DIR/flashrom_1.2_amd64.snap --dangerous --classic
   rm $RALPM_TMP_DIR/flashrom_1.2_amd64.snap
 }
