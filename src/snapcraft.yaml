@@ -1,0 +1,37 @@
+name: flashrom
+base: core20
+version: '1.2'
+summary: Identify, read, write, erase, and verify BIOS/ROM/flash chips
+description: |
+  Flashrom is a utility for identifying, reading, writing, verifying and erasing 
+  flash chips. It is designed to flash BIOS/EFI/coreboot/firmware/optionROM images 
+  on mainboards, network/graphics/storage controller cards, and various other 
+  programmer devices.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: classic
+
+apps:
+  flashrom:
+    command: usr/local/sbin/flashrom
+
+parts:
+  flashrom:
+    plugin: make
+    source: https://download.flashrom.org/releases/flashrom-v1.2.tar.bz2
+    source-type: tar
+
+    build-packages: 
+      - build-essential
+      - pkg-config
+      - libpci-dev
+      - zlib1g-dev
+      - libusb-dev
+      - libusb-1.0-0-dev
+      - libftdi-dev
+  
+    stage-packages:
+      - libftdi1
+      - libpci3
+      - libusb-0.1-4
+      - libusb-1.0-0

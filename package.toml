@@ -1,0 +1,9 @@
+[package_detail]
+name = "flashrom"
+description = "Identify, read, write, erase, and verify BIOS/ROM/flash chips"
+version = "1.2"
+source_url = "https://github.com/flashrom/flashrom"
+license = "GPL-2.0"
+install_script = "setup.sh"
+install_script_type = "shell"
+package_type = "snap"
